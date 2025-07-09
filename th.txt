@@ -60,9 +60,22 @@ use prefix
 useState:
 
 
+react js single page application:
+react routing...
 
 
+npm i react-router-dom
 
+<BrowserRouter>
+	<Routes>
+		<Route>
+	</>
+</BrowserRouter>
+
+create component Home and Movies
+
+create routes in app.js
+make entery in navbar.jsx
 
 
 

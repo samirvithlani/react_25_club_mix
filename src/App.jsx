@@ -9,17 +9,21 @@ import { MapDemo1 } from "./components/MapDemo1";
 import { UseStateDemo1 } from "./components/UseStateDemo1";
 import { UseStateDemo2 } from "./components/UseStateDemo2";
 import { UseStateDemo3 } from "./components/UseStateDemo3";
+import { Route, Routes } from "react-router-dom";
+import { Home } from "./components/Home";
+import { Movies } from "./components/Movies";
+import { Navbar } from "./components/Navbar";
+import { Shows } from "./components/Shows";
 
 function App() {
   return (
     <div>
-      <Header></Header>
-      {/* <UseStateDemo1></UseStateDemo1> */}
-      {/* <UseStateDemo2></UseStateDemo2> */}
-      <UseStateDemo3></UseStateDemo3>
-      {/* <MapDemo1/> */}
-      {/* <Content></Content>
-      <Footer></Footer> */}
+      <Navbar></Navbar>
+      <Routes>
+        <Route path="/home" element = {<Home/>}></Route>
+        <Route path="/movies" element = {<Movies/>}></Route>
+        <Route path="/shows" element = {<Shows/>}></Route>
+      </Routes>
     </div>
   );
 }
