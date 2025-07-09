@@ -1,0 +1,69 @@
+MERN : 
+M MONGO DB
+E Express
+R React js
+N Node js
+
+React js:
+
+Library and framework:
+pre define arch we have to just follow it:
+Library: core concept:
+
+node installed
+
+npm create vite
+
+npm:node package manager:
+jdk: jvm-jre ---> jar --> package --> class ->method
+node:node_modules -->npm -->node_module-->build -->.js|.ts -->func
+
+CRA : depricted
+react js lib:
+vite:
+
+npm is not rec eror
+npm install npm -g
+
+SPA : single page application -1 indec.html
+
+D:
+  projects:[f]
+     MERN [f] ctrl + l -> cmd
+       cmd 
+	npm create vite
+	  pname learning25
+	  react
+          javascript
+	  cd learning25
+	   npm install
+           code . [vs code]		
+		... click terminal -- new terminal
+		     change to cmd
+		     npm run dev	
+	
+
+2 type of compontes we can create in react js
+1)class based compontes
+2)function based compontes : 16.8
+
+map demo
+
+HTML - DOM --original dom*
+
+virtual dom:
+
+
+function bases component: hooks introduce..
+hooks are the special function having special behaviour
+use prefix
+useState:
+
+
+
+
+
+
+
+
+

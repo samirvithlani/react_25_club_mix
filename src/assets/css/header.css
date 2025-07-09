@@ -1,0 +1,12 @@
+.header{
+
+    height: 120px;
+    width: "100%";
+    background-color: black;
+    text-align: center;
+    margin: 10px;
+    position: sticky;
+    color: white;
+    top: 0%;
+    
+}
