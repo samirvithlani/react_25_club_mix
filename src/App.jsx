@@ -14,6 +14,8 @@ import { Home } from "./components/Home";
 import { Movies } from "./components/Movies";
 import { Navbar } from "./components/Navbar";
 import { Shows } from "./components/Shows";
+import { PlayContent } from "./components/PlayContent";
+import { PlayShow } from "./components/PlayShow";
 
 function App() {
   return (
@@ -23,6 +25,8 @@ function App() {
         <Route path="/home" element = {<Home/>}></Route>
         <Route path="/movies" element = {<Movies/>}></Route>
         <Route path="/shows" element = {<Shows/>}></Route>
+        <Route path="/playcontent/:name" element = {<PlayContent/>}></Route>
+        <Route path="/shows/playshow/:name" element ={<PlayShow/>}></Route>
       </Routes>
     </div>
   );
