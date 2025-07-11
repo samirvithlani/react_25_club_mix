@@ -16,17 +16,21 @@ import { Navbar } from "./components/Navbar";
 import { Shows } from "./components/Shows";
 import { PlayContent } from "./components/PlayContent";
 import { PlayShow } from "./components/PlayShow";
+import { InputDemo1 } from "./components/InputDemo1";
 
 function App() {
   return (
     <div>
       <Navbar></Navbar>
       <Routes>
+        <Route path="/" element ={<Home/>}></Route>
         <Route path="/home" element = {<Home/>}></Route>
         <Route path="/movies" element = {<Movies/>}></Route>
         <Route path="/shows" element = {<Shows/>}></Route>
         <Route path="/playcontent/:name" element = {<PlayContent/>}></Route>
         <Route path="/shows/playshow/:name" element ={<PlayShow/>}></Route>
+        <Route path="/inputdemo1" element = {<InputDemo1/>}></Route>
+        <Route path="/*" element ={<h1>404</h1>}></Route>
       </Routes>
     </div>
   );

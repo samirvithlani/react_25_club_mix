@@ -78,5 +78,7 @@ create routes in app.js
 make entery in navbar.jsx
 
 
+input color --> event.target.value color code
+
 
 
