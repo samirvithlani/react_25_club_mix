@@ -1,9 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { CustButton } from './CustButton'
 
 export const Movies = () => {
   return (
     <div style={{textAlign:"center",height:"400px",margin:"50px",backgroundColor:"goldenrod"}}>
+      <CustButton name="movies button"></CustButton>
         <h1>MOVIES</h1>
         <div className='container'>
           <div className='row' style={{padding:"20px"}}>

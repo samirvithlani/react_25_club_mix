@@ -91,4 +91,19 @@ context
 redux
 
 
+employee list
+				<TableComponent header>
+<table>
+<tr>
+<th>
+
+student list
+<table>
+<tr>
+<th>
+
+
+<TableComponent>
+
+
 

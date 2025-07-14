@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { CustButton } from "./CustButton";
 
 export const Shows = () => {
   const shows = [
@@ -24,6 +25,7 @@ export const Shows = () => {
   ];
   return (
     <div>
+      <CustButton></CustButton>
       <h1>SHOW COMPONENT</h1>
       <div className="container">
         <div className="row">
