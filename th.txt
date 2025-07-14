@@ -80,5 +80,15 @@ make entery in navbar.jsx
 
 input color --> event.target.value color code
 
+compontes:
+props : props stand for properties
+	    parent to child communication
+		props are read only
+
+to achive reusblity we use props
+
+context
+redux
+
 
 
