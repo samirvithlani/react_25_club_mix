@@ -20,6 +20,7 @@ import { InputDemo1 } from "./components/InputDemo1";
 import { Employee } from "./components/Employee";
 import { BookList } from "./components/BookList";
 import { FormDemo1 } from "./components/form/FormDemo1";
+import { FormDemo2 } from "./components/form/FormDemo2";
 
 function App() {
   return (
@@ -37,6 +38,7 @@ function App() {
         <Route path="/*" element ={<h1>404</h1>}></Route>
         <Route path = "/books" element = {<BookList/>}></Route>
         <Route path="/formdemo1" element = {<FormDemo1/>}></Route>
+        <Route path="/formdemo2" element = {<FormDemo2/>}></Route>
       </Routes>
     </div>
   );

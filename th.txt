@@ -109,4 +109,19 @@ student list
 Form handling....
 react-hook-form : hook based form..
 
+{
+	required:
+	{
+		value:true,
+		message:"name is required."
+	}
+}
+
+{
+            required:{
+                value:true,
+                message:"age is required"
+            }
+}
+
 
