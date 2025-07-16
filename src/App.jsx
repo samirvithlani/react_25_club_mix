@@ -18,6 +18,8 @@ import { PlayContent } from "./components/PlayContent";
 import { PlayShow } from "./components/PlayShow";
 import { InputDemo1 } from "./components/InputDemo1";
 import { Employee } from "./components/Employee";
+import { BookList } from "./components/BookList";
+import { FormDemo1 } from "./components/form/FormDemo1";
 
 function App() {
   return (
@@ -33,6 +35,8 @@ function App() {
         <Route path="/inputdemo1" element = {<InputDemo1/>}></Route>
         <Route path="/employee" element ={<Employee/>}></Route>
         <Route path="/*" element ={<h1>404</h1>}></Route>
+        <Route path = "/books" element = {<BookList/>}></Route>
+        <Route path="/formdemo1" element = {<FormDemo1/>}></Route>
       </Routes>
     </div>
   );
