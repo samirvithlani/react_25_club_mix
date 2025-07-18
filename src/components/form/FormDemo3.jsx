@@ -2,7 +2,7 @@ import React from 'react'
 import { useForm } from 'react-hook-form'
 
 export const FormDemo3 = () => {
-    const{register,handleSubmit,formState:{errors}}=useForm()
+    const{register,handleSubmit,formState:{errors}}=useForm({mode:"all",defaultValues:{"contact":"0000000000"}})
 
     const submitHandler = (data)=>{
         console.log(data)
