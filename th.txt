@@ -125,3 +125,5 @@ react-hook-form : hook based form..
 }
 
 
+//useState ->0 -->change -->component re-render
+
