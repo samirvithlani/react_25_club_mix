@@ -26,66 +26,70 @@ export const Navbar = () => {
               {/* <a class="nav-link" href="/home">
                 Home 
               </a> */}
-              <Link className="nav-link" to="/home">Home</Link>
+              <Link className="nav-link" to="/home">
+                Home
+              </Link>
             </li>
             <li class="nav-item">
               <Link class="nav-link" to="/movies">
                 Movies
               </Link>
-            </li> <li class="nav-item">
+            </li>{" "}
+            <li class="nav-item">
               <Link class="nav-link" to="/shows">
                 Shows
               </Link>
             </li>
-            
             <li class="nav-item">
               <Link class="nav-link" to="/inputdemo1">
-              inputdemo1
+                inputdemo1
               </Link>
             </li>
             <li class="nav-item">
               <Link class="nav-link" to="/employee">
-              employee
+                employee
               </Link>
             </li>
             <li class="nav-item">
               <Link class="nav-link" to="/formdemo1">
-              form demo 1
+                form demo 1
               </Link>
             </li>
             <li class="nav-item">
               <Link class="nav-link" to="/formdemo2">
-              form demo 2
+                form demo 2
               </Link>
             </li>
             <li class="nav-item">
               <Link class="nav-link" to="/formdemo3">
-              form demo 3
+                form demo 3
               </Link>
             </li>
             <li class="nav-item">
               <Link class="nav-link" to="/formdemo4">
-              form demo 4
+                form demo 4
               </Link>
             </li>
-            
             <li class="nav-item">
               <Link class="nav-link" to="/usememo">
-              usememo
+                usememo
               </Link>
             </li>
             <li class="nav-item">
               <Link class="nav-link" to="/findbomb">
-              FIND BOMB
+                FIND BOMB
               </Link>
             </li>
-            
             <li class="nav-item">
               <Link class="nav-link" to="/apidemo1">
-              apidemo1
+                apidemo1
               </Link>
             </li>
-
+            <li class="nav-item">
+              <Link class="nav-link" to="/omdbsearch">
+                omdbapi
+              </Link>
+            </li>
           </ul>
         </div>
       </nav>
