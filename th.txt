@@ -127,3 +127,34 @@ react-hook-form : hook based form..
 
 //useState ->0 -->change -->component re-render
 
+Logic:
+API : request methods
+
+GET POST PUT DLETE PATCH
+
+	     backednd   fronted
+read     db --> GET   ->    GET -->DATa
+write     db  <--POST        data<<<--write
+delete   db  <--DELETE     data<<<--delete
+update   db  <--PUT        data<<<--update
+
+fetch - function 
+axios - library :
+
+sync
+non sync
+
+------------------------------------
+====================================
+
+
+non sync 
+
+--------------------------- 1 hour
+===================== no wait...
+
+
+
+Promise : pending resolved rejected
+async await
+then catch

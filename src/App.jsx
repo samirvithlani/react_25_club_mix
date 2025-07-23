@@ -25,6 +25,7 @@ import { FormDemo3 } from "./components/form/FormDemo3";
 import { FormDemo4 } from "./components/form/FormDemo4";
 import { UseMemoDemo } from "./components/UseMemoDemo";
 import { FindBobDemo1 } from "./components/FindBobDemo1";
+import { ApiDemo1 } from "./components/ApiDemo1";
 
 function App() {
   return (
@@ -47,6 +48,7 @@ function App() {
         <Route path="/formdemo4" element = {<FormDemo4/>}></Route>
         <Route path="/usememo" element = {<UseMemoDemo/>}></Route>
         <Route path="/findbomb" element = {<FindBobDemo1/>}></Route>
+        <Route path="/apidemo1" element = {<ApiDemo1/>}></Route>
       </Routes>
     </div>
   );
