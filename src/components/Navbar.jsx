@@ -35,7 +35,7 @@ export const Navbar = () => {
                 Movies
               </Link>
             </li>{" "}
-            <li class="nav-item">
+            {/* <li class="nav-item">
               <Link class="nav-link" to="/shows">
                 Shows
               </Link>
@@ -79,15 +79,26 @@ export const Navbar = () => {
               <Link class="nav-link" to="/findbomb">
                 FIND BOMB
               </Link>
+            </li> */}
+            <li class="nav-item">
+              <Link class="nav-link" to="/apidemo11">
+                apidemo11
+              </Link>
             </li>
             <li class="nav-item">
-              <Link class="nav-link" to="/apidemo1">
-                apidemo1
+              <Link class="nav-link" to="/apidemo12">
+                apidemo12
               </Link>
             </li>
             <li class="nav-item">
               <Link class="nav-link" to="/omdbsearch">
                 omdbapi
+              </Link>
+            </li>
+            
+            <li class="nav-item">
+              <Link class="nav-link" to="/useEffectdemo">
+                useEffectdemo
               </Link>
             </li>
           </ul>

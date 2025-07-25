@@ -10,7 +10,7 @@ export const OmdbApi = () => {
     //&
 
     const res = await axios.get(
-      `http://www.omdbapi.com/?apikey=add&s=Avatar`
+      `http://www.omdbapi.com/?apikey=9d57be0b&s=Avatar`
     );
     console.log(res.data.Search); //api..respoonse..
     setmovies(res.data.Search);

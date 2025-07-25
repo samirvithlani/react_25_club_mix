@@ -158,3 +158,6 @@ non sync
 Promise : pending resolved rejected
 async await
 then catch
+
+useEffect:
+toHandle side effect in reactr js we can use useEffect hook:
