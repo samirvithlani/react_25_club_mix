@@ -30,34 +30,49 @@ import { OmdbApi } from "./components/OmdbApi";
 import { UseEffectDemo1 } from "./components/UseEffectDemo1";
 import { ApiDemo11 } from "./components/ApiDemo11";
 import { ApiDemo12 } from "./components/ApiDemo12";
+import { ApiDemo2 } from "./components/ApiDemo2";
+import { ToastContainer, Zoom } from "react-toastify";
 
 function App() {
   return (
     <div>
+      <ToastContainer
+        position="top-center"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick={false}
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="dark"
+        transition={Zoom}
+      />
       <Navbar></Navbar>
       <Routes>
-        <Route path="/" element ={<Home/>}></Route>
-        <Route path="/home" element = {<Home/>}></Route>
-        <Route path="/movies" element = {<Movies/>}></Route>
-        <Route path="/shows" element = {<Shows/>}></Route>
-        <Route path="/playcontent/:name" element = {<PlayContent/>}></Route>
-        <Route path="/shows/playshow/:name" element ={<PlayShow/>}></Route>
-        <Route path="/inputdemo1" element = {<InputDemo1/>}></Route>
-        <Route path="/employee" element ={<Employee/>}></Route>
-        <Route path="/*" element ={<h1>404</h1>}></Route>
-        <Route path = "/books" element = {<BookList/>}></Route>
-        <Route path="/formdemo1" element = {<FormDemo1/>}></Route>
-        <Route path="/formdemo2" element = {<FormDemo2/>}></Route>
-        <Route path="/formdemo3" element = {<FormDemo3/>}></Route>
-        <Route path="/formdemo4" element = {<FormDemo4/>}></Route>
-        <Route path="/usememo" element = {<UseMemoDemo/>}></Route>
-        <Route path="/findbomb" element = {<FindBobDemo1/>}></Route>
-        <Route path="/apidemo1" element = {<ApiDemo1/>}></Route>
-        <Route path="/apidemo11" element = {<ApiDemo11/>}></Route>
-        <Route path="/apidemo12" element = {<ApiDemo12/>}></Route>
-        <Route path="/omdbsearch" element = {<OmdbApi/>}></Route>
-        <Route path="/useEffectdemo" element = {<UseEffectDemo1/>}></Route>
-
+        <Route path="/" element={<Home />}></Route>
+        <Route path="/home" element={<Home />}></Route>
+        <Route path="/movies" element={<Movies />}></Route>
+        <Route path="/shows" element={<Shows />}></Route>
+        <Route path="/playcontent/:name" element={<PlayContent />}></Route>
+        <Route path="/shows/playshow/:name" element={<PlayShow />}></Route>
+        <Route path="/inputdemo1" element={<InputDemo1 />}></Route>
+        <Route path="/employee" element={<Employee />}></Route>
+        <Route path="/*" element={<h1>404</h1>}></Route>
+        <Route path="/books" element={<BookList />}></Route>
+        <Route path="/formdemo1" element={<FormDemo1 />}></Route>
+        <Route path="/formdemo2" element={<FormDemo2 />}></Route>
+        <Route path="/formdemo3" element={<FormDemo3 />}></Route>
+        <Route path="/formdemo4" element={<FormDemo4 />}></Route>
+        <Route path="/usememo" element={<UseMemoDemo />}></Route>
+        <Route path="/findbomb" element={<FindBobDemo1 />}></Route>
+        <Route path="/apidemo1" element={<ApiDemo1 />}></Route>
+        <Route path="/apidemo2" element={<ApiDemo2 />}></Route>
+        <Route path="/apidemo11" element={<ApiDemo11 />}></Route>
+        <Route path="/apidemo12" element={<ApiDemo12 />}></Route>
+        <Route path="/omdbsearch" element={<OmdbApi />}></Route>
+        <Route path="/useEffectdemo" element={<UseEffectDemo1 />}></Route>
       </Routes>
     </div>
   );
