@@ -15,7 +15,7 @@ export const useFetchApi = (url) => {
 
   useEffect(() => {
     getApiCall();
-  }, []);
+  }, [url]);
 
-  return { data, isLoading };
+  return { data, isLoading,getApiCall };
 };
