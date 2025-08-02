@@ -4,6 +4,7 @@ import { Loader } from "../common/Loader";
 import { useFetchApi } from "../hooks/ApiCallHook";
 import { toast } from "react-toastify";
 import { Button, Modal } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 export const ApiDemo11 = () => {
   const { data, isLoading, getApiCall } = useFetchApi(
@@ -75,6 +76,9 @@ export const ApiDemo11 = () => {
                   >
                     DETAIL
                   </button>
+                  <Link to={`/updateuser/${user._id}`} className="btn btn-warning">
+                  update
+                  </Link>
                 </td>
               </tr>
             );

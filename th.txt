@@ -161,3 +161,42 @@ then catch
 
 useEffect:
 toHandle side effect in reactr js we can use useEffect hook:
+
+data = [
+    {
+      "colors": [],
+      "isAvailable": true,
+      "unit": 0,
+      "_id": "647a03a8b94e241eaf6b2479",
+      "name": "ipad mini",
+      "price": 20000,
+      "description": "Na levai",
+      "createdAt": "2023-06-02T14:58:48.736Z",
+      "updatedAt": "2023-06-02T14:58:48.736Z",
+      "__v": 0
+    },
+    {
+      "colors": [],
+      "isAvailable": true,
+      "unit": 0,
+      "_id": "647a03b9b94e241eaf6b247b",
+      "name": "Lenovo legion",
+      "price": 120000,
+      "description": "i dont know",
+      "createdAt": "2023-06-02T14:59:05.400Z",
+      "updatedAt": "2023-06-02T14:59:05.400Z",
+      "__v": 0
+    },
+    {
+      "colors": [],
+      "isAvailable": true,
+      "unit": 0,
+      "_id": "647a03d0b94e241eaf6b247d",
+      "name": "Red rose",
+      "price": 50,
+      "description": "it's upto you",
+      "createdAt": "2023-06-02T14:59:28.741Z",
+      "updatedAt": "2023-06-02T14:59:28.741Z",
+      "__v": 0
+    },
+]

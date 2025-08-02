@@ -32,6 +32,7 @@ import { ApiDemo11 } from "./components/ApiDemo11";
 import { ApiDemo12 } from "./components/ApiDemo12";
 import { ApiDemo2 } from "./components/ApiDemo2";
 import { ToastContainer, Zoom } from "react-toastify";
+import { UpdateUser } from "./components/UpdateUser";
 
 function App() {
   return (
@@ -73,6 +74,7 @@ function App() {
         <Route path="/apidemo12" element={<ApiDemo12 />}></Route>
         <Route path="/omdbsearch" element={<OmdbApi />}></Route>
         <Route path="/useEffectdemo" element={<UseEffectDemo1 />}></Route>
+        <Route path="/updateuser/:id" element = {<UpdateUser/>}></Route>
       </Routes>
     </div>
   );

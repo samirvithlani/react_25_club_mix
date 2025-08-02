@@ -55,12 +55,37 @@ export const ApiDemo2 = () => {
     }
   };
 
+  const addProducts  = async()=>{
+
+    const data = [
+      {
+        name:"abc",
+        price:1200,
+        unit:100,
+        desciption:"anb",
+        colors:["red","blue","green"],
+        isAvailable:true
+      },
+      {
+        name:"pqr",
+        price:200,
+        unit:100,
+        desciption:"anb",
+        colors:["red","blue","green"],
+        isAvailable:true
+      }
+    ]
+
+    const res = await axios.post("http://node5.onrender.com/product/addproducts",data)
+    console.log(res)
+  }
+
   return (
     <div style={{ textAlign: "center" }}>
       <h1>API DEMO 2</h1>
       <button
         onClick={() => {
-          addUser();
+          addProducts();
         }}
       >
         ADD USER
