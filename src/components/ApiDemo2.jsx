@@ -72,7 +72,7 @@ export const ApiDemo2 = () => {
         unit:100,
         desciption:"anb",
         colors:["red","blue","green"],
-        isAvailable:true
+        isAvailable:false
       }
     ]
 

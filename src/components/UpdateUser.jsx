@@ -9,7 +9,13 @@ export const UpdateUser = () => {
     const {register,handleSubmit}= useForm({
         defaultValues:async()=>{
             const res = await axios.get("https://node5.onrender.com/user/user/"+id)
-            return res.data.data
+            console.log(res.data.data)
+            return {
+                ...res.data.data,
+                  isActive: res.data.data.isActive ? 'true' : 'false' ,
+                  hobbies:["cricket"]
+                
+            }
         }
     })
     const submitHandler  =async(data)=>{
@@ -32,6 +38,17 @@ export const UpdateUser = () => {
             <div>
                 <label>AGE</label>
                 <input type='text' {...register("age")}></input>
+            </div>
+            <div>
+                <label>STATUS</label>
+                ACTIVE<input type='radio' {...register("isActive")} value="true"></input>
+                NOT ACTIVE<input type='radio' {...register("isActive")} value="false"></input>
+            </div>
+            <div>
+                <label>HOBBIES</label>
+                cricket <input type='checkbox' {...register("hobbies")} value="cricket"></input>
+                chess <input type='checkbox' {...register("hobbies")} value="chess"></input>
+                football <input type='checkbox' {...register("hobbies")} value="football"></input>
             </div>
             <div>
                 <input type='submit'></input>
