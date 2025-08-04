@@ -1,9 +1,11 @@
 import axios from "axios";
-import React from "react";
+import React, { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
+import { ThemeContext } from "./ThemeContext";
 
 export const ApiDemo2 = () => {
+  const {theme} = useContext(ThemeContext)
   const navigate = useNavigate();
 
   // //https://node5.onrender.com/user/user
@@ -82,7 +84,7 @@ export const ApiDemo2 = () => {
 
   return (
     <div style={{ textAlign: "center" }}>
-      <h1>API DEMO 2</h1>
+      <h1>API DEMO 2 {theme}</h1>
       <button
         onClick={() => {
           addProducts();

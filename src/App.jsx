@@ -33,8 +33,11 @@ import { ApiDemo12 } from "./components/ApiDemo12";
 import { ApiDemo2 } from "./components/ApiDemo2";
 import { ToastContainer, Zoom } from "react-toastify";
 import { UpdateUser } from "./components/UpdateUser";
+import { User } from "./components/User";
+import { ThemeContext } from "./components/ThemeContext";
 
 function App() {
+  var theme ="dark"
   return (
     <div>
       <ToastContainer
@@ -50,6 +53,7 @@ function App() {
         theme="dark"
         transition={Zoom}
       />
+      <ThemeContext.Provider value={{theme}}>
       <Navbar></Navbar>
       <Routes>
         <Route path="/" element={<Home />}></Route>
@@ -75,7 +79,9 @@ function App() {
         <Route path="/omdbsearch" element={<OmdbApi />}></Route>
         <Route path="/useEffectdemo" element={<UseEffectDemo1 />}></Route>
         <Route path="/updateuser/:id" element = {<UpdateUser/>}></Route>
+        <Route path="/user" element = {<User/>}></Route>
       </Routes>
+      </ThemeContext.Provider>
     </div>
   );
 }
