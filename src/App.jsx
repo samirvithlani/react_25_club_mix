@@ -37,9 +37,10 @@ import { User } from "./components/User";
 import { ThemeContext } from "./components/ThemeContext";
 
 function App() {
-  var theme ="dark"
+  const [theme, settheme] = useState("dark")
+  console.log("theme in app",theme)
   return (
-    <div>
+    <div style={{backgroundColor:theme =="dark"?"black":"white",color:theme=="dark"?"white":"black"}}>
       <ToastContainer
         position="top-center"
         autoClose={5000}
@@ -53,34 +54,34 @@ function App() {
         theme="dark"
         transition={Zoom}
       />
-      <ThemeContext.Provider value={{theme}}>
-      <Navbar></Navbar>
-      <Routes>
-        <Route path="/" element={<Home />}></Route>
-        <Route path="/home" element={<Home />}></Route>
-        <Route path="/movies" element={<Movies />}></Route>
-        <Route path="/shows" element={<Shows />}></Route>
-        <Route path="/playcontent/:name" element={<PlayContent />}></Route>
-        <Route path="/shows/playshow/:name" element={<PlayShow />}></Route>
-        <Route path="/inputdemo1" element={<InputDemo1 />}></Route>
-        <Route path="/employee" element={<Employee />}></Route>
-        <Route path="/*" element={<h1>404</h1>}></Route>
-        <Route path="/books" element={<BookList />}></Route>
-        <Route path="/formdemo1" element={<FormDemo1 />}></Route>
-        <Route path="/formdemo2" element={<FormDemo2 />}></Route>
-        <Route path="/formdemo3" element={<FormDemo3 />}></Route>
-        <Route path="/formdemo4" element={<FormDemo4 />}></Route>
-        <Route path="/usememo" element={<UseMemoDemo />}></Route>
-        <Route path="/findbomb" element={<FindBobDemo1 />}></Route>
-        <Route path="/apidemo1" element={<ApiDemo1 />}></Route>
-        <Route path="/apidemo2" element={<ApiDemo2 />}></Route>
-        <Route path="/apidemo11" element={<ApiDemo11 />}></Route>
-        <Route path="/apidemo12" element={<ApiDemo12 />}></Route>
-        <Route path="/omdbsearch" element={<OmdbApi />}></Route>
-        <Route path="/useEffectdemo" element={<UseEffectDemo1 />}></Route>
-        <Route path="/updateuser/:id" element = {<UpdateUser/>}></Route>
-        <Route path="/user" element = {<User/>}></Route>
-      </Routes>
+      <ThemeContext.Provider value={{ theme,settheme }}>
+        <Navbar></Navbar>
+        <Routes>
+          <Route path="/" element={<Home />}></Route>
+          <Route path="/home" element={<Home />}></Route>
+          <Route path="/movies" element={<Movies />}></Route>
+          <Route path="/shows" element={<Shows />}></Route>
+          <Route path="/playcontent/:name" element={<PlayContent />}></Route>
+          <Route path="/shows/playshow/:name" element={<PlayShow />}></Route>
+          <Route path="/inputdemo1" element={<InputDemo1 />}></Route>
+          <Route path="/employee" element={<Employee />}></Route>
+          <Route path="/*" element={<h1>404</h1>}></Route>
+          <Route path="/books" element={<BookList />}></Route>
+          <Route path="/formdemo1" element={<FormDemo1 />}></Route>
+          <Route path="/formdemo2" element={<FormDemo2 />}></Route>
+          <Route path="/formdemo3" element={<FormDemo3 />}></Route>
+          <Route path="/formdemo4" element={<FormDemo4 />}></Route>
+          <Route path="/usememo" element={<UseMemoDemo />}></Route>
+          <Route path="/findbomb" element={<FindBobDemo1 />}></Route>
+          <Route path="/apidemo1" element={<ApiDemo1 />}></Route>
+          <Route path="/apidemo2" element={<ApiDemo2 />}></Route>
+          <Route path="/apidemo11" element={<ApiDemo11 />}></Route>
+          <Route path="/apidemo12" element={<ApiDemo12 />}></Route>
+          <Route path="/omdbsearch" element={<OmdbApi />}></Route>
+          <Route path="/useEffectdemo" element={<UseEffectDemo1 />}></Route>
+          <Route path="/updateuser/:id" element={<UpdateUser />}></Route>
+          <Route path="/user" element={<User />}></Route>
+        </Routes>
       </ThemeContext.Provider>
     </div>
   );

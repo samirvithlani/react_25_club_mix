@@ -1,13 +1,27 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import { ThemeContext } from "./ThemeContext";
 
 export const Navbar = () => {
+  var {theme,settheme} = useContext(ThemeContext)
+  const chanegTheme = ()=>{
+    console.log(theme)
+      if(theme=="dark"){
+        settheme("light")
+      }
+      else{
+        //theme ="dark"
+        settheme("dark")
+      }
+      
+  }
   return (
     <div>
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="#">
           Navbar
         </a>
+        <button onClick={()=>{chanegTheme()}}>{theme}</button>
         <button
           class="navbar-toggler"
           type="button"
