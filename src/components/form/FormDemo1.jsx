@@ -9,6 +9,7 @@ export const FormDemo1 = () => {
     const submitHanlder = (data)=>{
         console.log(data)
         setformdata(data)
+        //disptachrt("add doctor",data)
     }
   return (
     <div style={{textAlign:"center"}}>

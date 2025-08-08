@@ -35,6 +35,7 @@ import { ToastContainer, Zoom } from "react-toastify";
 import { UpdateUser } from "./components/UpdateUser";
 import { User } from "./components/User";
 import { ThemeContext } from "./components/ThemeContext";
+import Technology from "./components/Technology";
 
 function App() {
   const [theme, settheme] = useState("dark")
@@ -81,6 +82,7 @@ function App() {
           <Route path="/useEffectdemo" element={<UseEffectDemo1 />}></Route>
           <Route path="/updateuser/:id" element={<UpdateUser />}></Route>
           <Route path="/user" element={<User />}></Route>
+          <Route path="/tech" element ={<Technology/>}></Route>
         </Routes>
       </ThemeContext.Provider>
     </div>

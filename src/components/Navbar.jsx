@@ -125,6 +125,11 @@ export const Navbar = () => {
                 user
               </Link>
             </li>
+            <li class="nav-item">
+              <Link class="nav-link" to="/tech">
+                tech
+              </Link>
+            </li>
           </ul>
         </div>
       </nav>
