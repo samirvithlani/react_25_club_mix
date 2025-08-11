@@ -38,7 +38,7 @@ import { ThemeContext } from "./components/ThemeContext";
 import Technology from "./components/Technology";
 
 function App() {
-  const [theme, settheme] = useState("dark")
+  const [theme, settheme] = useState("light")
   console.log("theme in app",theme)
   return (
     <div style={{backgroundColor:theme =="dark"?"black":"white",color:theme=="dark"?"white":"black"}}>

@@ -2,7 +2,10 @@ import React, { useState } from "react";
 import { DragDropContext, Droppable, Draggable } from "@hello-pangea/dnd";
 
 export default function App() {
-  const [start, setStart] = useState(["C", "C++", "Java", "Python", "React"]);
+  const [start, setStart] = useState([
+    { id: "1", name: "c", status: "start" ,date:new Date()},
+    { id: "2", name: "cpp", status: "start" ,date:new Date()},
+  ]);
   const [end, setEnd] = useState([]);
 
   const onDragEnd = ({ source, destination }) => {
@@ -16,6 +19,8 @@ export default function App() {
     const copyFrom = [...from];
     const copyTo = [...to];
     const [moved] = copyFrom.splice(source.index, 1);
+    moved.status = destination.droppableId;
+
     copyTo.splice(destination.index, 0, moved);
 
     setFrom(copyFrom);
@@ -36,10 +41,18 @@ export default function App() {
         {["start", "end"].map((id) => (
           <Droppable droppableId={id} key={id}>
             {(provided) => (
-              <div ref={provided.innerRef} {...provided.droppableProps} style={listStyle}>
+              <div
+                ref={provided.innerRef}
+                {...provided.droppableProps}
+                style={listStyle}
+              >
                 <h3>{id}</h3>
                 {(id === "start" ? start : end).map((item, i) => (
-                  <Draggable key={item} draggableId={item} index={i}>
+                  <Draggable
+                    key={item.id}
+                    draggableId={item.id} 
+                    index={i}
+                  >
                     {(provided) => (
                       <div
                         ref={provided.innerRef}
@@ -52,12 +65,12 @@ export default function App() {
                           ...provided.draggableProps.style,
                         }}
                       >
-                        {item}
+                        {item.name} - {item.status}- {item.date?.toLocaleString()}
                       </div>
                     )}
                   </Draggable>
                 ))}
-                {provided.placeholder}
+                
               </div>
             )}
           </Droppable>
