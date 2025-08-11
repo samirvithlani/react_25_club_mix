@@ -36,6 +36,7 @@ import { UpdateUser } from "./components/UpdateUser";
 import { User } from "./components/User";
 import { ThemeContext } from "./components/ThemeContext";
 import Technology from "./components/Technology";
+import { StorageDemo1 } from "./components/StorageDemo1";
 
 function App() {
   const [theme, settheme] = useState("light")
@@ -83,6 +84,7 @@ function App() {
           <Route path="/updateuser/:id" element={<UpdateUser />}></Route>
           <Route path="/user" element={<User />}></Route>
           <Route path="/tech" element ={<Technology/>}></Route>
+          <Route path="/storageDemo1" element={<StorageDemo1 />}></Route>
         </Routes>
       </ThemeContext.Provider>
     </div>

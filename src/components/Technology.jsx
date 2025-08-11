@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { DragDropContext, Droppable, Draggable } from "@hello-pangea/dnd";
+import { motion } from "framer-motion";
 
 export default function App() {
   const [start, setStart] = useState([
@@ -20,11 +21,24 @@ export default function App() {
     const copyTo = [...to];
     const [moved] = copyFrom.splice(source.index, 1);
     moved.status = destination.droppableId;
+     if (destination.droppableId === "end" && !moved.completedDate) {
+      moved.completedDate = new Date();
+    }
 
     copyTo.splice(destination.index, 0, moved);
 
     setFrom(copyFrom);
     setTo(copyTo);
+  };
+
+   const getTimeDiff = (startDate, endDate) => {
+    if (!startDate || !endDate) return "";
+    const diffMs = endDate - startDate;
+    const diffSec = Math.floor(diffMs / 1000);
+    if (diffSec < 60) {
+      return `${diffSec} sec`;
+    }
+    return `${Math.floor(diffSec / 60)} min ${diffSec % 60} sec`;
   };
 
   const listStyle = {
@@ -34,6 +48,9 @@ export default function App() {
     width: 200,
     border: "1px solid #ccc",
   };
+  const items = ["🍎 Apple", "🍌 Banana", "🍇 Grapes"];
+
+  
 
   return (
     <div style={{ display: "flex", gap: 20, padding: 20 }}>
@@ -66,6 +83,17 @@ export default function App() {
                         }}
                       >
                         {item.name} - {item.status}- {item.date?.toLocaleString()}
+                        {item.status === "end" && (
+                          <>
+                            <div>
+                              End: {item.completedDate?.toLocaleTimeString()}
+                            </div>
+                            <div>
+                              Time Taken:{" "}
+                              {getTimeDiff(item.date, item.completedDate)}
+                            </div>
+                          </>
+                        )}
                       </div>
                     )}
                   </Draggable>
@@ -76,6 +104,7 @@ export default function App() {
           </Droppable>
         ))}
       </DragDropContext>
+    
     </div>
   );
 }

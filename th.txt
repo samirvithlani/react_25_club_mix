@@ -206,3 +206,21 @@ data = [
 contextAPI:
 
 user -->userList -->subUserList
+
+tasj:
+expense management system:
+title:car petrol
+amount:1200
+category:fuel
+date:
+
+title:medicine
+amount:500
+category:medical
+date:
+
+form: add expense..
+//localstorage:
+
+view expense:compontes
+table formate:
