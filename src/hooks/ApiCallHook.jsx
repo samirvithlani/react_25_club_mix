@@ -17,5 +17,5 @@ export const useFetchApi = (url) => {
     getApiCall();
   }, [url]);
 
-  return { data, isLoading,getApiCall };
+  return { data, isLoading,getApiCall,setdata };
 };

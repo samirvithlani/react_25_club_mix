@@ -7,7 +7,7 @@ import { Button, Modal } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 export const ApiDemo11 = () => {
-  const { data, isLoading, getApiCall } = useFetchApi(
+  const { data, isLoading, getApiCall,setdata } = useFetchApi(
     "https://node5.onrender.com/user/user"
   );
   const [show, setshow] = useState(false);
@@ -35,9 +35,19 @@ export const ApiDemo11 = () => {
     setshow(true)
   }
   const handleClose = ()=>setshow(false)
+  const searchHandler = async(value)=>{
+    const res = await axios.get("https://node5.onrender.com/user/filter?name="+value)
+    console.log(res.data.data)
+    setdata(res.data.data)
+
+  }
 
   return (
     <div style={{ textAlign: "center" }}>
+      <div>
+        <label>SEARCH</label>
+        <input type="search" onChange={(event)=>{searchHandler(event.target.value)}}></input>
+      </div>
       {isLoading && <Loader />}
       <h1>API DEMO 11</h1>
       <h1>USERS</h1>

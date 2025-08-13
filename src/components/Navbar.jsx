@@ -135,6 +135,18 @@ export const Navbar = () => {
                 storage Demo
               </Link>
             </li>
+            
+            <li class="nav-item">
+              <Link class="nav-link" to="/animationdemo1">
+                animation demo1
+              </Link>
+            </li>
+            
+            <li class="nav-item">
+              <Link class="nav-link" to="/deboucesearch">
+                deboucesearch
+              </Link>
+            </li>
 
           </ul>
         </div>
