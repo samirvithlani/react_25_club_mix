@@ -1,9 +1,14 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { ThemeContext } from "./ThemeContext";
+import { useSelector } from "react-redux";
 
 export const Navbar = () => {
   var {theme,settheme} = useContext(ThemeContext)
+  
+  const state = useSelector(state=>state)
+  console.log("nav..",state)
+
   const chanegTheme = ()=>{
     console.log(theme)
       if(theme=="dark"){
@@ -154,7 +159,9 @@ export const Navbar = () => {
               </Link>
             </li>
             
-
+              <li className="nav-item">
+                  <h3 style={{color:"red"}}>{state.cart.cart?.length}</h3>
+              </li>
           </ul>
         </div>
       </nav>
