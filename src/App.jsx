@@ -39,6 +39,7 @@ import Technology from "./components/Technology";
 import { StorageDemo1 } from "./components/StorageDemo1";
 import { AnimationDemo1 } from "./animation/AnimationDemo1";
 import { DebouceSearch } from "./components/DebouceSearch";
+import { UseRefDemo } from "./components/UseRefDemo";
 
 function App() {
   const [theme, settheme] = useState("light")
@@ -89,6 +90,7 @@ function App() {
           <Route path="/storageDemo1" element={<StorageDemo1 />}></Route>
           <Route path="/animationdemo1" element = {<AnimationDemo1/>}></Route>
           <Route path="/deboucesearch" element = {<DebouceSearch/>}></Route>
+          <Route path="/useref" element= {<UseRefDemo/>}></Route>
         </Routes>
       </ThemeContext.Provider>
     </div>
