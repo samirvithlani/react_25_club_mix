@@ -158,9 +158,19 @@ export const Navbar = () => {
                 useref
               </Link>
             </li>
+            <li class="nav-item">
+              <Link class="nav-link" to="/bank">
+                bank
+              </Link>
+            </li>
             
               <li className="nav-item">
                   <h3 style={{color:"red"}}>{state.cart.cart?.length}</h3>
+                  
+              </li>
+              <li className="nav-item">
+                  <h3 style={{color:"pink"}}>{state.bank.balance}</h3>
+                  
               </li>
           </ul>
         </div>
