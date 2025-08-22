@@ -1,12 +1,22 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useForm } from 'react-hook-form'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { depositAction } from '../redux/BankSlice'
+import { fetchContent } from '../redux/ContentSlice'
 
 export const BankComponent = () => {
     const {register:register1,handleSubmit:handleSubmit1} = useForm()
     const {register:register2,handleSubmit:handleSubmit2} = useForm()
+    const state = useSelector(state=>state)
+    console.log("state",state.content)
     const dispatch = useDispatch()
+    
+    useEffect(()=>{
+        dispatch(fetchContent())
+    },[])
+
+
+    
     const depositHandler = (data)=>{
         console.log("deposit data",data)
         dispatch(depositAction(Number(data.amount)))
