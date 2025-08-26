@@ -235,3 +235,5 @@ ui -- actoin --> store{}{}
 component <<-store
 reducer: is pure js funciton which will manage actions inside in and return new state of store..
 action : function which will manage current state and return next state:
+
+redux: redux tool kit

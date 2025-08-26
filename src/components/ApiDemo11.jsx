@@ -5,8 +5,13 @@ import { useFetchApi } from "../hooks/ApiCallHook";
 import { toast } from "react-toastify";
 import { Button, Modal } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { addUser } from "../redux/UserSlice";
 
 export const ApiDemo11 = () => {
+
+  const dispatch = useDispatch()
+
   const { data, isLoading, getApiCall,setdata } = useFetchApi(
     "https://node5.onrender.com/user/user"
   );
@@ -89,6 +94,7 @@ export const ApiDemo11 = () => {
                   <Link to={`/updateuser/${user._id}`} className="btn btn-warning">
                   update
                   </Link>
+                  <button onClick={()=>{dispatch(addUser(user))}} className="btn btn-info">select</button>
                 </td>
               </tr>
             );
