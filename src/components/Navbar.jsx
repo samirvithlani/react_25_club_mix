@@ -4,29 +4,36 @@ import { ThemeContext } from "./ThemeContext";
 import { useSelector } from "react-redux";
 
 export const Navbar = () => {
-  var {theme,settheme} = useContext(ThemeContext)
-  
-  const state = useSelector(state=>state)
-  console.log("nav..",state)
+  var { theme, settheme } = useContext(ThemeContext);
 
-  const chanegTheme = ()=>{
-    console.log(theme)
-      if(theme=="dark"){
-        settheme("light")
-      }
-      else{
-        //theme ="dark"
-        settheme("dark")
-      }
-      
-  }
+  const state = useSelector((state) => state);
+  console.log("nav..", state);
+
+  const state1 = useSelector((state) => state);
+  console.log(state1);
+
+  const chanegTheme = () => {
+    console.log(theme);
+    if (theme == "dark") {
+      settheme("light");
+    } else {
+      //theme ="dark"
+      settheme("dark");
+    }
+  };
   return (
     <div>
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="#">
           Navbar
         </a>
-        <button onClick={()=>{chanegTheme()}}>{theme}</button>
+        <button
+          onClick={() => {
+            chanegTheme();
+          }}
+        >
+          {theme}
+        </button>
         <button
           class="navbar-toggler"
           type="button"
@@ -119,7 +126,6 @@ export const Navbar = () => {
                 omdbapi
               </Link>
             </li>
-            
             <li class="nav-item">
               <Link class="nav-link" to="/useEffectdemo">
                 useEffectdemo
@@ -140,19 +146,16 @@ export const Navbar = () => {
                 storage Demo
               </Link>
             </li>
-            
             <li class="nav-item">
               <Link class="nav-link" to="/animationdemo1">
                 animation demo1
               </Link>
             </li>
-            
             <li class="nav-item">
               <Link class="nav-link" to="/deboucesearch">
                 deboucesearch
               </Link>
             </li>
-            
             <li class="nav-item">
               <Link class="nav-link" to="/useref">
                 useref
@@ -163,15 +166,20 @@ export const Navbar = () => {
                 bank
               </Link>
             </li>
-            
-              <li className="nav-item">
-                  <h3 style={{color:"red"}}>{state?.cart?.cart?.length}</h3>
-                  
-              </li>
-              <li className="nav-item">
-                  <h3 style={{color:"pink"}}>{state?.bank?.balance}</h3>
-                  
-              </li>
+            <li className="nav-item">
+              <h3 style={{ color: "red" }}>
+
+                USER COUNT <Link to="/selecteduser"> {state1.user.users?.length}
+                          </Link>
+
+              </h3>
+            </li>
+            <li className="nav-item">
+              <h3 style={{ color: "red" }}>{state?.cart?.cart?.length}</h3>
+            </li>
+            <li className="nav-item">
+              <h3 style={{ color: "pink" }}>{state?.bank?.balance}</h3>
+            </li>
           </ul>
         </div>
       </nav>

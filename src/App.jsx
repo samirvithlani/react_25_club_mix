@@ -41,6 +41,7 @@ import { AnimationDemo1 } from "./animation/AnimationDemo1";
 import { DebouceSearch } from "./components/DebouceSearch";
 import { UseRefDemo } from "./components/UseRefDemo";
 import { BankComponent } from "./components/BankComponent";
+import { SelectedUsers } from "./components/SelectedUsers";
 
 function App() {
   const [theme, settheme] = useState("light")
@@ -93,6 +94,7 @@ function App() {
           <Route path="/deboucesearch" element = {<DebouceSearch/>}></Route>
           <Route path="/useref" element= {<UseRefDemo/>}></Route>
           <Route path="/bank" element={<BankComponent />}></Route>
+          <Route path="/selecteduser" element ={<SelectedUsers/>}></Route>
         </Routes>
       </ThemeContext.Provider>
     </div>
