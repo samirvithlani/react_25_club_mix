@@ -180,6 +180,12 @@ export const Navbar = () => {
             <li className="nav-item">
               <h3 style={{ color: "pink" }}>{state?.bank?.balance}</h3>
             </li>
+            
+             <li class="nav-item">
+              <Link class="nav-link" to="/muidemo1">
+                MUI DEMO 1
+              </Link>
+            </li>
           </ul>
         </div>
       </nav>

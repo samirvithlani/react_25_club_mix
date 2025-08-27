@@ -16,7 +16,8 @@ const userSlice = createSlice({
             // console.log("state...",state.users)
             // console.log("action...",action)
             state.users.push(action.payload)
-        }
+        },
+        //removeUser -- filter
     }
 })
 

@@ -42,6 +42,7 @@ import { DebouceSearch } from "./components/DebouceSearch";
 import { UseRefDemo } from "./components/UseRefDemo";
 import { BankComponent } from "./components/BankComponent";
 import { SelectedUsers } from "./components/SelectedUsers";
+import { MuiDemo1 } from "./components/mui/MuiDemo1";
 
 function App() {
   const [theme, settheme] = useState("light")
@@ -95,6 +96,7 @@ function App() {
           <Route path="/useref" element= {<UseRefDemo/>}></Route>
           <Route path="/bank" element={<BankComponent />}></Route>
           <Route path="/selecteduser" element ={<SelectedUsers/>}></Route>
+          <Route path="/muidemo1" element={<MuiDemo1/>}></Route>
         </Routes>
       </ThemeContext.Provider>
     </div>
