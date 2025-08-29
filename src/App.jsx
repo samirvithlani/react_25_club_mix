@@ -43,6 +43,8 @@ import { UseRefDemo } from "./components/UseRefDemo";
 import { BankComponent } from "./components/BankComponent";
 import { SelectedUsers } from "./components/SelectedUsers";
 import { MuiDemo1 } from "./components/mui/MuiDemo1";
+import { MuiDemo2 } from "./components/mui/MuiDemo2";
+import { MuiDemo3 } from "./components/mui/MuiDemo3";
 
 function App() {
   const [theme, settheme] = useState("light")
@@ -97,6 +99,8 @@ function App() {
           <Route path="/bank" element={<BankComponent />}></Route>
           <Route path="/selecteduser" element ={<SelectedUsers/>}></Route>
           <Route path="/muidemo1" element={<MuiDemo1/>}></Route>
+          <Route path="/muidemo2" element={<MuiDemo2/>}></Route>
+          <Route path="/muidemo3" element={<MuiDemo3/>}></Route>
         </Routes>
       </ThemeContext.Provider>
     </div>
