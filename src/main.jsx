@@ -17,8 +17,8 @@ ReactDOM.createRoot(document.getElementById("root")).render(
   //   </PersistGate>
   // </Provider>
   <Provider store={mystore}>
-    <BrowserRouter>
+    
       <App />
-    </BrowserRouter>
+    
   </Provider>
 );

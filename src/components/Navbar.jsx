@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import { ThemeContext } from "./ThemeContext";
 import { useSelector } from "react-redux";
 
@@ -199,6 +199,7 @@ export const Navbar = () => {
           </ul>
         </div>
       </nav>
+      <Outlet/>
     </div>
   );
 };

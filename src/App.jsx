@@ -45,6 +45,7 @@ import { SelectedUsers } from "./components/SelectedUsers";
 import { MuiDemo1 } from "./components/mui/MuiDemo1";
 import { MuiDemo2 } from "./components/mui/MuiDemo2";
 import { MuiDemo3 } from "./components/mui/MuiDemo3";
+import AppRoutes from "./router/AppRoutes";
 
 function App() {
   const [theme, settheme] = useState("light")
@@ -65,8 +66,9 @@ function App() {
         transition={Zoom}
       />
       <ThemeContext.Provider value={{ theme,settheme }}>
-        <Navbar></Navbar>
-        <Routes>
+        <AppRoutes></AppRoutes>
+        {/* <Navbar></Navbar> */}
+        {/* <Routes>
           <Route path="/" element={<Home />}></Route>
           <Route path="/home" element={<Home />}></Route>
           <Route path="/movies" element={<Movies />}></Route>
@@ -101,7 +103,7 @@ function App() {
           <Route path="/muidemo1" element={<MuiDemo1/>}></Route>
           <Route path="/muidemo2" element={<MuiDemo2/>}></Route>
           <Route path="/muidemo3" element={<MuiDemo3/>}></Route>
-        </Routes>
+        </Routes> */}
       </ThemeContext.Provider>
     </div>
   );
